@@ -1,0 +1,5 @@
+a {
+  transition-property: border-radius, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.57, 0.46, 0.04, 1.69);
+}/*# sourceMappingURL=main.css.map */

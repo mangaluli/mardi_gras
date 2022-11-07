@@ -1,0 +1,4 @@
+
+.vscode/settings.json
+*.scss
+tailwind.config.js

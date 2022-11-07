@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title xD</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cc1: '#0D0D0D',
+            cc2: '#F2F2F2',
+            cc3: '#F2CC0F',
+            cc4: '#8CBF3F',
+            cc5: '#9453A6'
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Background Image -->
+  <div id="bg-img" class="fixed z-[-10]">
+    <img src="img/bgimg.jpg" alt="Background Image" class="object-cover w-[100vw] h-[100vh]" />
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="fixed z-10 w-full bg-cc1 border-b-2 border-b-cc4 h-11 lg:h-16">
+      <div class="flex items-center justify-between flex-wrap bg-cc1 border-b-cc4 lg:w-2/3 m-auto">
+        <div class="flex items-center flex-shrink-0 ml-6 mr-12">
+          <a href="index.html" class="flex lg:flex-col items-center">
+            <span class="font-bold text-3xl tracking-tight text-cc3">Mardi Gras</span>
+            <span class="font-semibold text-1xl tracking-tight text-cc4 mx-2">New Orleans</span>
+          </a>
+        </div>
+        <div class="block lg:hidden">
+          <button id="burgir"
+            class="flex items-center px-3 py-2 border rounded text-cc2 border-cc2 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div id="nav-dropdown" class="w-full flex-grow lg:items-center lg:w-auto lg:flex hidden">
+          <div class="bg-cc1 text-lg font-semibold lg:flex-grow">
+            <a href="index.html"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              Home
+            </a>
+            <a href="#"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              About
+            </a>
+            <a href="#"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              Media
+            </a>
+            <a href="#"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              FAQ
+            </a>
+            <a href="#"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              Contact
+            </a>
+            <a href="#"
+              class="block mx-2 my-1 lg:inline-block lg:my-0 lg:py-1 text-cc2 hover:text-white hover:underline underline-offset-4 hover:scale-110">
+              Trivia
+            </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+  </div>
+
+  <div class="lg:border-x-2 lg:border-l-cc3 lg:border-r-cc5 pt-11 lg:pt-16 lg:w-2/3 m-auto bg-cc2">
+
+    <!-- Image Slider -->
+    <section>
+      <div id="collapse" class="bg-cc1 bg-opacity-30">
+        <div class="relative bg-cc1 bg-opacity-90 m-auto border-b-2 border-b-cc4">
+          <div id="frame">
+            <!-- Image Slider Container -->
+          </div>
+          <div class="absolute flex justify-between top-0 left-0 w-full h-full">
+            <a id="chevron-left"
+              class="flex justify-center my-auto w-12 h-12 m-3 bg-cc2 border-[1px] border-cc1 border-opacity-70 bg-opacity-40 hover:bg-opacity-70 rounded-3xl hover:rounded-2xl cursor-pointer hover:scale-125">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left m-auto"
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline points="15 6 9 12 15 18"></polyline>
+              </svg>
+            </a>
+            <a id="chevron-right"
+              class="flex justify-center my-auto w-12 h-12 m-3 bg-cc2 border-[1px] border-cc1 border-opacity-70 bg-opacity-40 hover:bg-opacity-70 rounded-3xl hover:rounded-2xl cursor-pointer hover:scale-125">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right m-auto"
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline points="9 6 15 12 9 18"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paragraph with LOGO -->
+    <section class="p-12">
+      <img src="img/logo.png" alt="" class="text-cc2 w-full lg:float-left lg:w-96">
+      <p class="text-justify text-md lg:text-lg p-2">
+        Mardi Gras refers to events of the Carnival celebration, beginning on or after the Christian
+        feasts of
+        the Epiphany (Three Kings Day) and culminating on the day before Ash Wednesday, which is known as Shrove
+        Tuesday. Mardi
+        Gras is French for "Fat Tuesday", reflecting the practice of the last night of eating rich, fatty foods before
+        the
+        ritual Lenten sacrifices and fasting of the Lenten season.
+      </p>
+      <p class="text-justify text-md lg:text-lg p-2">
+        Related popular practices are associated with Shrovetide celebrations before the fasting and religious
+        obligations
+        associated with the penitential season of Lent. In countries such as the United Kingdom, Mardi Gras is more
+        usually
+        known as Pancake Day or (traditionally) Shrove Tuesday (derived from the word shrive, meaning "to administer the
+        sacrament of confession to; to absolve").
+      </p>
+      <p class="text-justify text-md lg:text-lg p-2">
+        The festival season varies from city to city, as some traditions, such as the one in New Orleans, Louisiana,
+        consider
+        Mardi Gras to stretch the entire period from Twelfth Night (the last night of Christmas which begins Epiphany)
+        to Ash
+        Wednesday. Others treat the final three-day period before Ash Wednesday as the Mardi Gras. In Mobile, Alabama,
+        Mardi Gras–associated social events begin in November, followed by mystic society balls on Thanksgiving, then
+        New
+        Year's Eve, followed by parades and balls in January and February, celebrating up to midnight before Ash
+        Wednesday. In
+        earlier times, parades were held on New Year's Day. Carnival is an important celebration in Anglican and
+        Catholic
+        European nations.
+      </p>
+      <p class="text-justify text-md lg:text-lg p-2">
+        Mardi Gras, as a celebration of life before the more-somber occasion of Ash Wednesday, nearly always involves
+        the use of
+        masks and costumes by its participants, and the most popular celebratory colors are purple, green, and gold. In
+        New
+        Orleans, for example, these often take the shape of fairies, animals, people from myths, or various Medieval
+        costumes as well as clowns and Indians (Native Americans). However, many costumes today are simply elaborate
+        creations of colored feathers and capes. Unlike Halloween costumery, Mardi Gras costumes are not usually
+        associated with
+        such things as zombies, mummies, bats, blood, and the like, though death may be a theme in some. The Venice
+        tradition
+        has brought golden masks into the usual round of costumes.
+      </p>
+      <p class="text-justify text-md lg:text-lg p-2">
+        Women exposing their breasts during Mardi Gras in New Orleans, US, has been documented since 1889, when the
+        Times-Democrat decried the "degree of immodesty exhibited by nearly all female masqueraders seen on the
+        streets." The
+        practice was mostly limited to tourists in the upper Bourbon Street area. In the crowded streets of the French
+        Quarter, generally avoided by locals on Mardi Gras Day, flashers on balconies cause crowds to form on the
+        streets.
+      </p>
+      <p class="text-justify text-md lg:text-lg p-2">
+        In the last decades of the 20th century, the rise in producing commercial videotapes catering to voyeurs helped
+        encourage a tradition of women baring their breasts in exchange for beads and trinkets. Social scientists
+        studying
+        "ritual disrobement" found, at Mardi Gras 1991, 1,200 instances of body-baring in exchange for beads or other
+        favors.
+      </p>
+    </section>
+
+    <!-- Paragraph -->
+    <section>
+
+    </section>
+  </div>
+
+  <footer>
+    <div class="flex flex-col lg:flex-row justify-center bg-cc1 text-cc2">
+
+      <label for="email" class="m-4">
+        Sign up for our newsletter
+      </label>
+
+      <input type="text" name="email" id="" class="bg-cc1 text-cc2 m-4">
+
+      <button class="border-2 border-cc2 m-4 rounded-md text-bold ">
+        SUBSCRIBE
+      </button>
+
+    </div>
+
+    <div class="flex justify-center bg-cc1 h-12 align-middle opacity-90">
+      <span class="text-cc2">@2022 Copyright: Alex Bairakovski</span>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
