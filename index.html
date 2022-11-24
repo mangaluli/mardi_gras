@@ -7,38 +7,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Title xD</title>
 
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,400&display=swap"
+    rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- custom Tailwind variables -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cc1: '#0D0D0D',
-            cc2: '#F2F2F2',
-            cc3: '#F2CC0F',
-            cc4: '#8CBF3F',
-            cc5: '#9453A6',
-          },
-          screens: {
-            '3xl': '1921px',
-          }
-        }
-      }
-    }
-  </script>
 
 </head>
 
 <body>
+  <img class="bg-img" src="../img/bgimg.jpg" alt="">
+
+  <header>
+    <div class="logo">
+      <span>MARDI GRAS</span>
+      <span>New-Orleans</span>
+    </div>
+    <nav>
+      <span class="active">Home</span>
+      <span>About</span>
+      <span>Media</span>
+      <span>FaQ</span>
+      <span>Contact</span>
+    </nav>
+    <div class="right">
+      <div class="burgir">
+        <div class="bu"></div>
+        <div class="rg"></div>
+        <div class="ir"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/header.js"></script>
+  </header>
 
 
-  <script type="text/javascript" src="js/index.js"></script>
+  <div class="pages">
+    <div class="page">
+      <div class="item">
+        <div class="slider">
+          <span></span>
+          <img src="img/slider/1.jpg" alt="">
+          <span></span>
+          <div>&lt;</div>
+          <div>&gt;</div>
+          <script type="text/javascript" src="js/slider.js"></script>
+        </div>
+      </div>
+
+      <div class="item">
+        asd
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="item">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="item">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="item">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="item">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/pages.js"></script>
+  </div>
+
+
+  <footer>
+
+  </footer>
+
 </body>
 
 </html>
