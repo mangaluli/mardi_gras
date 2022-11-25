@@ -18,7 +18,6 @@ fetch('../img/slider/meta.json')
       current_slide = 0,
       sum = json.length - 1,
       chev = document.querySelectorAll('.slider>div');
-    console.log(chev);
 
     chev[0].addEventListener('click', () => {
       current_slide > 0 ?

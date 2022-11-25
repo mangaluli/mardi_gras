@@ -136,7 +136,7 @@ body {
       width: 200px;
 
       .burgir {
-        @media (min-width: $br1) {
+        @media (min-width: 1001px) {
           display: none;
         }
 
@@ -146,9 +146,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
         aspect-ratio: 1 / 1;
-        padding-right: 8px;
+        height: 69px;
+
 
         div {
           transition-property: border-radius width height margin;
