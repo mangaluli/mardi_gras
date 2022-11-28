@@ -1,176 +1,208 @@
 body {
   header {
     & {
-      z-index: 999;
       position: sticky;
+      z-index: 1000;
+      width: 100%;
       top: 0;
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      align-items: center;
       background-color: $cc1t;
       backdrop-filter: blur(10px);
-    }
 
-    @media (min-width: 1500px) {
-      width: 1480px;
-    }
+      @media (min-width: 666px) {}
 
-    @media (min-width: 2000px) {
-      width: 1800px;
+      @media (min-width: 999px) {}
+
+      @media (min-width: 1234px) {}
     }
 
     .logo {
       display: flex;
-      flex-direction: column;
+      align-items: flex-end;
       justify-content: center;
-      align-items: center;
-      width: 200px;
-      min-width: 200px;
-      margin: 8px 40px;
+
+      @media (min-width: 666px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10%;
+      }
+
+      @media (max-width: 340px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       span {
+        font-family: $font1;
+        font-weight: 900;
+
+        width: max-content;
+        height: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        padding-left: 10px;
+
         &:first-child {
-
-          font-size: $fs3;
-          color: $cc5;
-          font-weight: 900;
-
-          text-shadow: 0 2px 3px $cc1;
-          letter-spacing: 2px;
-          transform: scale(1.4);
+          text-shadow: 2px 3px 0px rgb(0, 0, 0);
+          font-size: 160%;
+          letter-spacing: 3px;
+          color: $cc3;
         }
 
         &:last-child {
-          font-size: $fs1;
-          color: $cc3;
-          font-weight: 600;
-
-          text-shadow: 0 2px 2px $cc1;
+          text-shadow: 1px 2px 0px rgb(0, 0, 0);
+          font-size: 100%;
           letter-spacing: 2px;
+          color: $cc5;
         }
       }
     }
 
     nav {
-      position: sticky;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      transform: translateY(47%);
+
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: $cc1;
 
-      @media (max-width: $br1) {
-        position: fixed;
-        transform: translateX(-100vw);
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        background-color: $cc1t;
+      pointer-events: none;
+      background-color: transparent;
 
-        &.open {
-          transform: translateX(0);
-        }
+      @media (min-width: 666px) {
+        position: relative;
+        pointer-events: all;
+        height: 100%;
+        flex-direction: row;
+        color: $cc2;
+        transform: translateY(0);
       }
 
       span {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 10px 0;
+        color: $cc2tt;
+        font-size: 100%;
+        max-height: 18vh;
 
-        width: 70px;
-        margin: 0 20px;
-        padding: 4px;
+        @media (min-width: 666px) {
+          color: $cc2t;
+          transform: translateX(0);
 
-        font-size: $fs1;
-        letter-spacing: 2px;
-        text-shadow: 2px 1px 2px $cc2t;
-        text-underline-offset: 4px;
-
-        &.active {
-          font-size: $fs2;
-          text-decoration: underline 2px;
+          font-size: 120%;
+          padding: 0 6px;
         }
 
+
+        &.active,
         &:focus,
         &:hover {
-          text-decoration: underline 1px;
+          color: $cc2tt;
+          text-decoration: underline;
+          text-underline-offset: 6px;
 
-          &.active {
-            text-decoration: underline 2px;
+          @media (min-width: 666px) {
+            color: $cc2;
           }
         }
 
-        @media (max-width: $br1) {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 90px;
-          text-align: center;
-          font-size: $fs2;
-          font-weight: 600;
-          border: solid 1px rgba(200, 200, 200, .6);
+        transform: translateX(20%);
 
-          &:nth-child(3n) {
-            background-color: $cc4;
+        &:nth-child(2n+2) {
+          transform: translateX(-20%);
+
+          @media (min-width: 666px) {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      &.open {
+        @media (max-width: 666px) {
+          transition: background-color 300ms ease-in-out;
+          pointer-events: all;
+          background-color: $cc1t;
+
+          span {
+            transition: transform 100ms ease-in-out, color 100ms ease-in-out;
+            color: $cc2t;
+            font-size: 40px;
+
+            &.active,
+            &:focus,
+            &:hover {
+              color: $cc2;
+              text-decoration: underline;
+              text-underline-offset: 6px;
+            }
+
+            transform: translateX(0);
           }
 
-          &:nth-child(3n+1) {
-            background-color: $cc3;
-          }
+          ~.burgir {
+            div {
+              width: 30px;
+              height: 4px;
+              margin: 2.5px 0;
+              background-color: $cc2;
+              box-shadow: 0 0 12px $cc2;
 
-          &:nth-child(3n+2) {
-            background-color: $cc5;
+
+              transition-property:
+                background-color,
+                box-shadow,
+                width,
+                height,
+                margin;
+              transition-duration:
+                100ms;
+              transition-timing-function:
+                ease-in-out;
+            }
           }
         }
       }
     }
 
-    .right {
+    .burgir {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: right;
-      width: 200px;
 
-      .burgir {
-        @media (min-width: 1001px) {
-          display: none;
-        }
+      @media (min-width: 666px) {
+        display: none;
+      }
 
-        z-index: 1000;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 1 / 1;
-        height: 69px;
+      div {
+        width: 26px;
+        height: 4px;
+        border-radius: 3px;
+        margin: 1.5px 0;
+        background-color: $cc2t;
+        box-shadow: transparent;
 
-
-        div {
-          transition-property: border-radius width height margin;
-          transition-duration: 100ms;
-          transition-timing-function: ease-in-out;
-
-          border-radius: 3px;
-          width: 40px;
-          height: 6px;
-          margin: 2px 0;
-
-          background-color: $cc1t;
-        }
-
-        &.open {
-          div {
-            border-radius: 2px;
-            width: 44px;
-            height: 7px;
-            margin: 4px 0;
-
-            background-color: $cc2;
-          }
-        }
+        transition-property:
+          width,
+          height,
+          margin;
+        transition-duration:
+          100ms;
+        transition-timing-function:
+          ease-in;
       }
     }
   }

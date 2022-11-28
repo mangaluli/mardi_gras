@@ -2,16 +2,13 @@ $cc1: #0D0D0D;
 $cc1t: hsla(0, 0%, 5%, .7);
 $cc2: #F2F2F2;
 $cc2t: hsla(00, 0%, 95%, .7);
+$cc2tt: hsla(00, 0%, 95%, 0);
 $cc3: #F2CC0F;
 $cc4: #8CBF3F;
-$cc4t: hsla(84, 50%, 50%, 0.8);
+$cc4t: hsla(84, 50%, 50%, 0.7);
 $cc5: #9453A6;
 
-$br1: 1000px;
-
-$fs1: 120%;
-$fs2: 140%;
-$fs3: 160%;
+$br1: 280px;
 
 $font1: 'Roboto', sans-serif;
 $font2: 'Henny Penny';
@@ -46,30 +43,17 @@ body {
   }
 
   .pages {
-    height: 200vh;
-    margin: 0 auto;
-
-    @media (min-width: 1500px) {
-      width: 1480px;
-    }
-
-    @media (min-width: 1500px) {
-      width: 1480px;
-    }
-
-    @media (min-width: 2000px) {
-      width: 1800px;
-    }
-
     .page {
       .item {
-        border-radius: 20px;
-        background-color: $cc2t;
+        background-color: $cc1t;
         backdrop-filter: blur(10px);
-        margin: 6px;
 
-        @media (min-width: 1500px) {
-          margin: 20px;
+        @media (min-width:999px) {
+          margin-bottom: 20px;
+        }
+
+        @media (min-width:1234px) {
+          margin-bottom: 60px;
         }
       }
     }

@@ -1,88 +1,133 @@
 .slider {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
 
   img {
+    position: relative;
     cursor: pointer;
+    min-height: 44vh;
+    object-fit: cover;
+    aspect-ratio: 16/9;
     width: 100%;
-    object-fit: contain;
-    max-height: 60vh;
+
+    @media(min-width: 666px) {
+      max-height: 66vh;
+    }
+
+    @media(min-width: 999px) {
+      max-height: 88vh;
+    }
   }
 
   span {
-    top: 0;
-    right: 0;
-    margin: 14px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: $cc2;
+    background-color: $cc1t;
+    width: 100%;
 
     &:first-of-type {
-      font-size: $fs3;
+      top: 0;
+      font-size: 120%;
+      font-family: $font3;
+      letter-spacing: 3px;
       font-weight: bold;
-      text-align: center;
+
+
+      @media (min-width: 666px) {
+        padding: 2px 10%;
+        font-size: 160%;
+      }
+
+      @media (min-width: 999px) {
+        font-size: 180%;
+      }
+
+      @media (min-width: 1515px) {
+        padding: 3px 20%;
+        font-size: 222%;
+      }
     }
 
     &:last-of-type {
-      font-size: 110%;
+      bottom: 0;
       text-align: justify;
+      padding: 2px 6px;
+      font-size: 70%;
+
+
+      @media (min-width: 666px) {
+        padding: 6px 10%;
+        font-size: 80%;
+      }
+
+      @media (min-width: 999px) {
+        font-size: 120%;
+      }
+
+      @media (min-width: 1515px) {
+        padding: 12px 20%;
+        font-size: 160%;
+      }
     }
   }
 
   div {
     cursor: pointer;
     position: absolute;
-    padding: 0 60px;
-    top: 0;
 
     display: flex;
     align-items: center;
 
-    height: 100%;
     width: 50%;
+    height: 100%;
 
     font-family: monospace;
     font-size: 60px;
     font-weight: bold;
     color: $cc2t;
     text-shadow:
-      0 0 10px $cc2t,
+      0 0 6px $cc1t,
       0 0 0 $cc2t,
-      0 0 10px $cc1t;
+      0 0 0 $cc1t;
 
     transition-property: color text-shadow font-size padding;
     transition-duration: 150ms;
     transition-timing-function: linear;
 
+
     &:hover {
       color: $cc2;
-      font-size: 100px;
-      padding: 0 30px;
+      font-size: 50px;
     }
 
     &:first-of-type {
+      content: "";
       justify-content: left;
       left: 0;
-      border-radius: 20px 0 0 20px;
 
       &:hover {
-        box-shadow: inset 200px 0 200px -200px $cc1t;
+        box-shadow: inset 25% 0 25% -25% $cc1t;
         text-shadow:
-          0 0 10px $cc1,
-          30px 0 0 $cc2,
-          30px 0 10px $cc1;
+          0 0 10px $cc2,
+          18px 0 0 $cc2,
+          18px 0 10px $cc2;
       }
     }
 
     &:last-of-type {
       justify-content: right;
       right: 0;
-      border-radius: 0 20px 20px 0;
 
       &:hover {
-        box-shadow: inset -200px 0 200px -200px $cc1t;
+        box-shadow: inset -25% 0 25% -25% $cc1t;
         text-shadow:
-          0 0 10px $cc1,
-          -30px 0 0 $cc2,
-          -30px 0 10px $cc1;
+          0 0 10px $cc2,
+          -18px 0 0 $cc2,
+          -18px 0 10px $cc2;
       }
     }
   }
