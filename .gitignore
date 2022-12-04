@@ -1,4 +1,7 @@
 
 .vscode
 *.scss
-*_unminified.js
+*_unminified.*
+
+
+!**/Source
