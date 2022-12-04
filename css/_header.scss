@@ -8,8 +8,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: $cc1t;
-      backdrop-filter: blur(10px);
+      background-color: $black;
+      padding: 10px;
 
       @media (min-width: 666px) {}
 
@@ -23,16 +23,16 @@ body {
       align-items: flex-end;
       justify-content: center;
 
+      @media (max-width: 380px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       @media (min-width: 666px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-left: 10%;
-      }
-
-      @media (max-width: 340px) {
-        flex-direction: column;
-        align-items: center;
       }
 
       span {
@@ -51,65 +51,66 @@ body {
           text-shadow: 2px 3px 0px rgb(0, 0, 0);
           font-size: 160%;
           letter-spacing: 3px;
-          color: $cc3;
+          color: $gold;
         }
 
         &:last-child {
           text-shadow: 1px 2px 0px rgb(0, 0, 0);
           font-size: 100%;
           letter-spacing: 2px;
-          color: $cc5;
+          color: $green;
         }
       }
     }
 
     nav {
       position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100vh;
-      transform: translateY(47%);
 
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 1em;
 
       pointer-events: none;
       background-color: transparent;
 
-      @media (min-width: 666px) {
+      @media (min-width: 665.8px) {
         position: relative;
         pointer-events: all;
         height: 100%;
         flex-direction: row;
-        color: $cc2;
-        transform: translateY(0);
+        color: $white;
       }
 
       span {
         padding: 10px 0;
-        color: $cc2tt;
+        color: $white_t;
         font-size: 100%;
         max-height: 18vh;
 
-        @media (min-width: 666px) {
-          color: $cc2t;
+        @media (min-width: 665.8px) {
+          color: $white_t1;
           transform: translateX(0);
 
           font-size: 120%;
-          padding: 0 6px;
         }
 
 
         &.active,
         &:focus,
         &:hover {
-          color: $cc2tt;
+          cursor: pointer;
+          color: $white_t;
           text-decoration: underline;
           text-underline-offset: 6px;
 
-          @media (min-width: 666px) {
-            color: $cc2;
+          @media (min-width: 665.8px) {
+            color: $white;
           }
         }
 
@@ -118,27 +119,28 @@ body {
         &:nth-child(2n+2) {
           transform: translateX(-20%);
 
-          @media (min-width: 666px) {
+          @media (min-width: 665.8px) {
             transform: translateX(0);
           }
         }
       }
 
       &.open {
-        @media (max-width: 666px) {
+        @media (max-width: 665.8px) {
+
           transition: background-color 300ms ease-in-out;
           pointer-events: all;
-          background-color: $cc1t;
+          background-color: $black_t1;
 
           span {
             transition: transform 100ms ease-in-out, color 100ms ease-in-out;
-            color: $cc2t;
+            color: $white_t1;
             font-size: 40px;
 
             &.active,
             &:focus,
             &:hover {
-              color: $cc2;
+              color: $white;
               text-decoration: underline;
               text-underline-offset: 6px;
             }
@@ -151,8 +153,8 @@ body {
               width: 30px;
               height: 4px;
               margin: 2.5px 0;
-              background-color: $cc2;
-              box-shadow: 0 0 12px $cc2;
+              background-color: $white;
+              box-shadow: 0 0 12px $white;
 
 
               transition-property:
@@ -172,18 +174,14 @@ body {
     }
 
     .burgir {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-
+      position: relative;
+      aspect-ratio: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      @media (min-width: 666px) {
+      @media (min-width: 665.8px) {
         display: none;
       }
 
@@ -192,7 +190,7 @@ body {
         height: 4px;
         border-radius: 3px;
         margin: 1.5px 0;
-        background-color: $cc2t;
+        background-color: $white_t1;
         box-shadow: transparent;
 
         transition-property:

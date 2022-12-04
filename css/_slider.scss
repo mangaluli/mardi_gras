@@ -25,8 +25,8 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    color: $cc2;
-    background-color: $cc1t;
+    color: $white;
+    background-color: $black_t1;
     width: 100%;
 
     &:first-of-type {
@@ -57,6 +57,7 @@
       text-align: justify;
       padding: 2px 6px;
       font-size: 70%;
+      color: $white_t1;
 
 
       @media (min-width: 666px) {
@@ -79,6 +80,8 @@
     cursor: pointer;
     position: absolute;
 
+    padding: 20px;
+
     display: flex;
     align-items: center;
 
@@ -88,11 +91,11 @@
     font-family: monospace;
     font-size: 60px;
     font-weight: bold;
-    color: $cc2t;
+    color: $white_t1;
     text-shadow:
-      0 0 6px $cc1t,
-      0 0 0 $cc2t,
-      0 0 0 $cc1t;
+      0 0 6px $black_t1,
+      0 0 0 $white_t1,
+      0 0 0 $black_t1;
 
     transition-property: color text-shadow font-size padding;
     transition-duration: 150ms;
@@ -100,7 +103,7 @@
 
 
     &:hover {
-      color: $cc2;
+      color: $white;
       font-size: 50px;
     }
 
@@ -110,11 +113,11 @@
       left: 0;
 
       &:hover {
-        box-shadow: inset 25% 0 25% -25% $cc1t;
+        box-shadow: inset 25% 0 25% -25% $black_t1;
         text-shadow:
-          0 0 10px $cc2,
-          18px 0 0 $cc2,
-          18px 0 10px $cc2;
+          0 0 10px $white,
+          18px 0 0 $white,
+          18px 0 10px $white;
       }
     }
 
@@ -123,11 +126,11 @@
       right: 0;
 
       &:hover {
-        box-shadow: inset -25% 0 25% -25% $cc1t;
+        box-shadow: inset -25% 0 25% -25% $black_t1;
         text-shadow:
-          0 0 10px $cc2,
-          -18px 0 0 $cc2,
-          -18px 0 10px $cc2;
+          0 0 10px $white,
+          -18px 0 0 $white,
+          -18px 0 10px $white;
       }
     }
   }

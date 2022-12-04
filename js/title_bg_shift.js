@@ -8,5 +8,5 @@ function shift() {
 }
 
 shift();
-window.onresize = shift;
-window.onscroll = shift;
+window.addEventListener('scroll', shift);
+window.addEventListener('resize', shift);

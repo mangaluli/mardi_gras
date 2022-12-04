@@ -1,0 +1,43 @@
+.item:has(.faq) {
+  background-color: transparent;
+}
+
+.faq {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $white_t1;
+
+  span {
+    width: 94%;
+
+    &.q {
+      font-size: 1.2em;
+      font-weight: 900;
+      letter-spacing: 1px;
+
+      &:hover~ {
+        .a {
+          height: unset;
+        }
+      }
+    }
+
+    &.a {
+      font-size: 1em;
+
+      height: 0;
+      overflow: hidden;
+
+      margin-bottom: 16px;
+
+      &:hover~.a {
+        height: unset;
+      }
+    }
+  }
+}

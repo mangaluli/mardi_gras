@@ -1,0 +1,114 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em auto;
+
+  @media (min-width: 666px) {
+    flex-direction: row;
+    width: 88%;
+  }
+
+  @media (min-width: 1500px) {
+    width: 66%;
+  }
+
+
+  .fullscreen-image {
+    display: none;
+
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: $black_t1;
+
+    @media (min-width: 666px) {}
+
+    div {
+      width: 100%;
+      position: relative;
+
+      button {
+        cursor: pointer;
+        background-color: unset;
+        border: unset;
+
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        aspect-ratio: 1;
+        padding: 0 12px;
+        margin: 20px;
+        background-color: $black_t1;
+
+        border-radius: 50%;
+        border: 3px solid $white_t1;
+        color: $white;
+        font-size: 2em;
+        font-family: cursive;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        object-fit: contain;
+
+        max-height: calc(100vh - 138px - 2em);
+      }
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+
+
+    >img {
+      cursor: pointer;
+      width: 100%;
+      transition: scale 100ms linear;
+      object-fit: contain;
+      align-self: flex-start;
+      border-radius: 16px;
+
+      &:hover {
+        @media (min-width: 666px) {
+          scale: 1.01;
+        }
+      }
+    }
+  }
+}
+
+.youtube-embeds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1500px) {}
+
+  iframe {
+    margin: 20px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+
+
+  }
+
+}

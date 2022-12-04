@@ -10,29 +10,32 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 80px;
+      height: 60px;
       background-image: url('../img/header.jpg');
-      background-position-y: 68%;
+      background-repeat: no-repeat;
 
-      color: $cc2;
+      color: $white;
       font-family: $font3;
-      font-size: 30px;
       text-align: center;
       font-weight: bold;
-
       text-shadow: 0px 0px 6px rgb(0, 0, 0);
 
-      @media (min-width: 666px) {}
+      font-size: 30px;
+      background-size: 200vh;
 
       @media (min-width: 999px) {
         font-size: 222%;
       }
 
-      @media (min-width: 1234px) {}
+      @media (min-width: 1333px) {
+        font-size: 333%;
+        background-size: 100vw;
+      }
     }
 
+    line-height: 1.4rem;
 
-    color: $cc2t;
+    color: $white_t1;
     text-align: justify;
     padding: 2px 6px;
 
@@ -45,7 +48,8 @@
 
     @media (min-width: 1515px) {
       padding: 12px 20%;
-      font-size: 130%;
+      font-size: 160%;
+      line-height: 2.4rem;
     }
   }
 
