@@ -1,42 +1,101 @@
-.item:has(.faq) {
-  background-color: transparent;
-}
-
 .faq {
+  max-width: 999px;
   height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 10px;
+
   background-color: $white_t1;
+  backdrop-filter: blur(20px);
 
-  span {
-    width: 94%;
+  .qa {
+    display: flex;
+    flex-direction: column;
+    margin: 14px;
 
-    &.q {
-      font-size: 1.2em;
-      font-weight: 900;
-      letter-spacing: 1px;
+    span {
+      color: $black_t1;
 
-      &:hover~ {
-        .a {
-          height: unset;
+      &:first-child {
+        text-align: left;
+        margin-bottom: 6px;
+        font-size: 1.4em;
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+
+      &:last-child {
+        line-height: 1.5;
+        transition: all 200ms ease-in-out;
+        height: 0;
+        font-weight: 400;
+        letter-spacing: 1px;
+        overflow: hidden;
+      }
+
+      @media (min-width: 999px) {
+        margin: 0 40px;
+
+        &:first-child {
+          margin-bottom: 6px;
+          font-size: 1.6em;
+          font-weight: 900;
+          letter-spacing: 1px;
+        }
+
+        &:last-child {
+          line-height: 1.5;
+          font-size: 1.2;
+          transition: all 200ms ease-in-out;
+          height: 0;
+          font-weight: 400;
+          letter-spacing: 1px;
+          overflow: hidden;
+        }
+      }
+
+    }
+
+    &.active,
+    &:hover {
+      span {
+        color: $black;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        &:first-child {
+          text-decoration: underline;
+        }
+
+        &:last-child {
+          height: 1.7em;
+          box-shadow: inset 0 -10px 8px -8px $black_t1;
         }
       }
     }
 
-    &.a {
-      font-size: 1em;
+    &.active {
+      transform: scale(1.03);
 
-      height: 0;
-      overflow: hidden;
+      span {
+        &:first-child {
+          text-decoration: none;
+        }
 
-      margin-bottom: 16px;
-
-      &:hover~.a {
-        height: unset;
+        &:last-child {
+          height: unset;
+          box-shadow: unset;
+          font-size: 1.1em;
+          transition: height 200ms ease-in-out;
+        }
       }
     }
   }

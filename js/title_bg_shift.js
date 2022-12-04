@@ -1,12 +1,1 @@
-
-
-function shift() {
-  let titles = document.querySelectorAll('.article>span:first-of-type');
-  titles.forEach((title) =>
-    title.style.backgroundPosition = `center ${title.getBoundingClientRect().bottom * -1}px`
-  );
-}
-
-shift();
-window.addEventListener('scroll', shift);
-window.addEventListener('resize', shift);
+function shift() { document.querySelectorAll(".article>span:first-of-type").forEach(t => t.style.backgroundPosition = `center ${-1 * t.getBoundingClientRect().bottom}px`) } shift(), window.addEventListener("scroll", shift), window.addEventListener("resize", shift);

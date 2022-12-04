@@ -1,0 +1,1 @@
+document.querySelectorAll(".qa").forEach((e, a) => e.addEventListener("click", () => change_faq(a))); function change_faq(e) { document.querySelectorAll(".qa").forEach((a, c) => e == c ? a.classList.add("active") : a.classList.remove("active")) }

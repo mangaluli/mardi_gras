@@ -33,7 +33,6 @@ $font3: 'Pattaya';
 }
 
 body {
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,39 +57,22 @@ body {
     flex-grow: 1;
 
     .page {
-      position: absolute;
-      top: 69px;
+      position: relative;
       bottom: 120px;
       width: 100%;
       flex-direction: column;
       justify-content: center;
       gap: 66px;
-
-      @media (min-width: 381px) {
-        top: 50px;
-      }
-
-      @media (min-width: 496px) {
-        bottom: 82px;
-      }
-
-      @media (min-width:666px) {
-        bottom: 69px;
-      }
-
-      @media (min-width: 777px) {
-        bottom: 67px;
-      }
+      top: 0;
 
       .item {
         background-color: $black_t1;
         backdrop-filter: blur(10px);
 
-        @media (min-width: 666px) {}
-
-        @media (min-width:999px) {}
-
-        @media (min-width:1234px) {}
+        &:has(.faq) {
+          background-color: transparent;
+          backdrop-filter: unset;
+        }
       }
     }
   }

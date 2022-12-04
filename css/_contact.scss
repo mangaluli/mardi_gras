@@ -1,0 +1,63 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    width: 80%;
+    max-width: 600px;
+    margin: .5em auto;
+    height: 2em;
+    font-size: 1.3em;
+    text-align: center;
+    border-radius: .5em;
+    border: 2px solid $black_t1;
+    background-color: $white;
+  }
+
+  .error-output {
+    font-size: 1em;
+    height: unset;
+    letter-spacing: .33px;
+    background-color: $black_t1;
+    backdrop-filter: blur(10px);
+    color: $white;
+
+    display: flex;
+    flex-direction: column;
+
+    &.pass {
+      font-size: 3em;
+      color: $green;
+    }
+
+    span {
+      background-color: transparent;
+      border: unset;
+
+      color: $white_t1;
+
+      &:before {
+        content: "*";
+        position: absolute;
+        transform: translateX(-20px);
+        font-size: 1.4em;
+        color: rgb(240, 0, 0);
+        font-weight: 900;
+      }
+    }
+  }
+
+  textarea {
+    height: auto;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $black_t1;
+    backdrop-filter: blur(10px);
+    color: $white;
+
+    padding: 4px 18px;
+    width: min-content;
+  }
+}

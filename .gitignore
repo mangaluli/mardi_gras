@@ -1,4 +1,4 @@
 
-# .vscode/settings.json
-# *.scss
-# tailwind.config.js
+.vscode
+*.scss
+*_unminified.js
