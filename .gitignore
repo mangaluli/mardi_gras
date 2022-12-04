@@ -2,6 +2,3 @@
 .vscode
 *.scss
 *_unminified.*
-
-
-!**/Source
